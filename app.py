@@ -10,7 +10,7 @@ bcrypt = Bcrypt(app)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="soucidadao123",
+    password="",
     database="stockhub_db"
 )
 
