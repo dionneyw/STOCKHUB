@@ -7,24 +7,12 @@
 </head>
 <body>
     <h1>STOCKHUB desenvolvido para uso da Pixel Internet</h1>
-    <nav>
-        <a href="{{ url_for('search') }}" class="botao-link"><span class="texto-zoom">Buscar</span> </a>
-        <a href="{{ url_for('relatorio_excel') }}" class="botao-link"> <span class="texto-zoom">Exportar Excel </span></a>
-        <a href="{{ url_for('relatorio_pdf') }}" class="botao-link"> <span class="texto-zoom"> Exportar PDF</span> </a>
-        <a href="{{ url_for('register') }}" class="botao-link" ><span class="texto-zoom">Registrar Equipamento </span></a>
-        
-        <a href="{{ url_for('generate_report') }}" class="botao-link"><span class="texto-zoom"> Baixar Relatório JSON </span></a>
-        <a href="{{ url_for('relatorio_html') }}" class="botao-link"><span class="texto-zoom">Visualizar Relatório HTML </span></a>
-        
-        <a href="{{ url_for('logout') }}" class="botao-link"> <span class="texto-zoom"> Sair</a>
+    <a href="{{ url_for('register') }}">Registrar Equipamento</a> |
+    <a href="{{ url_for('search') }}">Buscar</a> |
+    <a href="{{ url_for('generate_report') }}">Baixar Relatório</a>
     
-    
-
-    
-    </nav>
-    <br>
-    <table border="1" cellpadding="5" cellspacing="0">
-        <thead style="background-color: #00A19A; color: white;">
+    <table>
+        <thead>
             <tr>
                 <th>ID</th>
                 <th>Modelo</th>

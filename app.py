@@ -17,14 +17,12 @@ app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "soucidadao123")
 bcrypt = Bcrypt(app)
 
-# Função para criar conexão nova
-def get_db_connection():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="123",
-        database="stockhub_db"
-    )
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="soucidadao123",
+    database="stockhub_db"
+)
 
 # Decorador para exigir login
 def login_required(f):
