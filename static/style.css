@@ -1,11 +1,13 @@
 body {
     background-image: url('../static/vem-pra-pixel.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 20%;
     background-attachment: fixed;
     font-family: Arial, sans-serif;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(231, 102, 231, 0.6);
 }
 table {
     background-color: rgba(255, 255, 255, 0.8);
@@ -17,5 +19,39 @@ h1 {
     color: #00b2ff;
 }
 a {
-    color: #00ff99;
+    color: #2f00ff;
 }
+
+
+/* ESTILOS BASE DO BOTÃO (Como antes) */
+.botao-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  
+  /* Necessário para alinhar o span ampliado corretamente */
+  overflow: hidden; 
+}
+
+/* ESTILOS DA LETRA (o span) */
+.texto-zoom {
+  /* 1. Base: Garante que o texto possa ser transformado */
+  display: inline-block;
+  
+  /* 2. Suaviza a transição do zoom */
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* A CHAVE: Aplica o zoom na letra (span) quando o mouse passa sobre o link (a) */
+.botao-link:hover .texto-zoom {
+  transform: scale(1.5); /* Aumenta a letra em 20% */
+  /* Opcional: Ajusta o posicionamento do texto ampliado para ficar mais centralizado */
+  transform-origin: center center;
+}
+

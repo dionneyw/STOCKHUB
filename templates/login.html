@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Login - StockHub</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Acessar StockHub</h1>
+    <h1 >Acessar StockHub</h1>
     {% if erro %}
         <p style="color:red;">{{ erro }}</p>
     {% endif %}
